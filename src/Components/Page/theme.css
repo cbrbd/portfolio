@@ -1,0 +1,12 @@
+:root{
+    /* main colors */
+    --light-main: #eeeeee;
+    --dark-main: #1e2743;
+    --dark-secondary: #161D31;
+    --special-main: #58cd9f;
+    --special-secondary: #153426;
+    --error-main: #DD8080;
+    --error-secondary: #290000; 
+    --success-main: #58cd9F;
+    --success-secondary: #153426;
+  }

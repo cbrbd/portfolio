@@ -1,0 +1,172 @@
+
+.sidebar{
+  position: fixed;
+  min-height: 100vh;
+  border-right: 1px solid var(--special-main);
+  background-color: var(--dark-secondary);
+  white-space: nowrap;
+}
+
+.sidebar.large{
+    min-width: 15rem;
+    width: 15rem;
+    transition-property: min-width, width;
+    transition-duration: .4s;
+    overflow: hidden;
+}
+  
+.sidebar.small{
+    min-width: 4%;
+    width: 4%;
+    transition-property: min-width, width;
+    transition-duration: .4s;
+}
+  
+.section-list>.navlink{
+  display: block;
+}
+
+
+.section-list>.navlink, .section-list>.navlink:visited, .section-list>.navlink:focus{
+    padding: 1rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid var(--special-main);
+    color: var(--light-main);
+    transition-property: background-color, color;
+    transition-duration: .4s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+  
+
+.section-list>.navlink:hover, .section-list>.navlink.active, .section-list>.cv-link:hover{
+    background-color: var(--special-secondary);
+    color: var(--special-main);
+    transition-property: background-color, color;
+    transition-duration: .4s;
+}
+  
+  .section-list>.cv-link{
+    display: inline-block;
+    background-color: transparent;
+    padding: 1rem;
+    font-size: 100%;
+    text-decoration: underline;
+    color: var(--light-main);
+    cursor: pointer;
+    width: 100%;
+    text-align: start;
+    box-sizing: border-box;
+  }
+
+  .sidebar h2 span, .navlink span, .cv-link span{
+    margin-left: .5rem;
+  }
+    
+  .sidebar.small h2 span, .sidebar.small .navlink span, .sidebar.small .cv-link span{
+    display: none;
+  }
+  
+  .sidebar.small a{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .sidebar h2{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .sidebar h2 span{
+    margin-left: auto;
+  }
+  
+
+  .chevron-button{
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--light-main);
+    border: none;
+    transition-property: color;
+    transition-duration: .4s;
+  }
+
+  .chevron-button:hover{
+    color: var(--special-main);
+    transition-property: color;
+    transition-duration: .4s;
+  }
+  
+  .chevron-button svg{
+    vertical-align: bottom;
+  }
+
+  .sidebar-icon{
+    width: 1.5rem;
+  }
+  
+  
+
+  @media screen and (max-width: 1280px) {
+
+    .sidebar{
+      min-height: 0%;
+    }
+
+    .chevron-button{
+        display: none;
+    }
+
+
+    .section-list h2{
+        display: none;
+    }
+
+
+    .section-list>.navlink,
+    .section-list>.navlink.active,
+    .section-list>.navlink:focus, 
+    .section-list a.cv-link{
+      display: flex;
+      flex: 1 1 0px;
+      justify-content: center;
+      align-items: center;
+      border-bottom: none;
+    }
+    
+    .sidebar-icon{
+        vertical-align: baseline;
+    }
+
+    .section-list>.navlink{
+        border-right: 1px solid var(--special-main);
+    }
+
+    .sidebar, .sidebar.small, .sidebar.large{
+        width: 100%;
+        height: fit-content;
+        z-index: 1;
+        position: fixed;
+        border-bottom: 1px solid var(--special-main);
+    }
+
+    .section-list{
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .section-list a span{
+        display: none;
+    }
+
+    .sidebar-icon{
+        margin: 0px;
+    }
+    
+}

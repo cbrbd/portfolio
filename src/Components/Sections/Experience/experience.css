@@ -1,0 +1,114 @@
+.experience-formation{
+    padding-top: 0;
+}
+
+.experience-formation section:nth-of-type(1){
+    animation: fadein .6s ease-in forwards;
+}
+
+.experience-formation section:nth-of-type(2){
+    animation: fadein .6s ease-in .5s both;
+}
+
+.formation h2, .experience h2{
+    margin-bottom: 2rem;
+}
+
+.formation-table{
+    width: 100%;
+    align-self: center;
+    
+}
+
+.formation-years{
+    font-weight: 1000;
+}
+
+.formation-table tr>td{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.formation-table thead tr th{
+    text-align: left;
+    font-size: 90%;
+}
+
+.formation-table tr:not(:last-of-type)>td{
+    border-bottom: 1px solid var(--special-main);
+}
+
+
+.formation{
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.experience{
+    border-top: 3px outset var(--special-main);
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.jobs{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 48% 48%;
+}
+
+.language-flag{
+    width: 1.5rem;
+    outline: 1px solid #888888;
+    vertical-align: middle;
+}
+
+
+.job{
+    border: 1px solid var(--special-main);
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+.job header{
+    background-color: var(--special-secondary);
+    color: var(--special-main);
+    font-size: 120%;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.job .timespan{
+    font-size: 90%;
+    background-color: var(--special-secondary);
+    color: var(--light-main);
+}
+
+.job .timespan, .mission, .job-skills, .job-tech{
+    padding: .5rem;
+}
+
+.mission h4, .job-skills h4, .job-tech h4{
+    margin: 0;
+    font-size: 90%;
+    text-decoration: underline;
+}
+
+.job div:not(:last-of-type){
+    border-bottom: 1px solid var(--special-main);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .jobs{
+        grid-template-columns: 100%;
+    }
+
+    .job{
+        width: 100%;
+    }
+
+    
+}

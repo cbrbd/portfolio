@@ -1,0 +1,33 @@
+@keyframes slideFromLeft {
+    from{
+      margin-left: -100%;
+      opacity: 0;
+    }
+    to{
+      margin-left: 0%;
+      opacity: 1;  
+    }
+  }
+
+  
+
+  @keyframes slideFromRight {
+    from{
+      margin-left: 100%;
+      opacity: 0;
+    }
+    to{
+      margin-left: 0%;
+      opacity: 1;  
+    }
+  }
+
+  
+  @keyframes fadein {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }

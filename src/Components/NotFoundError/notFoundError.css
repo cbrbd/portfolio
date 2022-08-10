@@ -1,0 +1,59 @@
+.not-found-error{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.go-back-to-safety{
+    align-self: flex-start;
+}
+
+.square-background{
+    background-color: var(--special-secondary);
+    border: 1px solid var(--special-main);
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-foreground{
+    background-color: var(--special-main);
+    color: var(--special-secondary);
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.bouncing-error{
+    display: inline-block;
+    background-color: var(--special-secondary);
+    color: var(--special-main);
+    border: 1px solid var(--special-main);
+    position: absolute;
+    display: flex;
+    font-size: 200%;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    height:5%;
+    animation: 
+            moveX 3s linear 0s infinite alternate, 
+            moveY 7s linear 0s infinite alternate
+}
+
+@keyframes moveX {
+    from { left: 0} to { left: 95%}
+}
+@keyframes moveY {
+    from { top: 0} to { top: 95%}
+}

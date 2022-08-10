@@ -1,0 +1,281 @@
+
+.skills{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 50% 50%;
+    animation: fadein .6s ease-in forwards;
+}
+
+.hardskills{
+    border-right: 1px solid var(--special-main);
+    grid-column: 1/2;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hardskills>div{
+    width: 100%;
+}
+
+.hardskills section:first-of-type,
+.softskills section:first-of-type{
+    margin-bottom: 4rem;
+}
+
+.softskills section{
+    display: flex;
+    flex-direction: column;
+}
+
+.front-end{
+    margin-bottom: 2rem;
+}
+
+
+.softskills{
+    grid-column: 2/3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box; 
+    padding-left: 2rem;
+}
+.softskills>div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    grid-column: 1/3;
+    text-align: center;
+    color: var(--special-main);
+    text-transform: uppercase;
+}
+
+.hardskills h2, .softskills h2{
+    text-align: center;
+    margin-bottom: 0;
+    color: var(--special-main);
+}
+
+.hardskills h3, .softskills h3{
+    color: var(--special-main);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.gauge-wrapper{
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    height: 1.4rem;
+    display: flex;
+    width: 100%;
+}
+
+.gauge-label{
+    align-self: center;
+    display: block;
+    box-sizing: border-box;
+    margin-right: 1rem; 
+    width: 30%;
+    height: fit-content;
+}
+
+.gauge {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: var(--light-main);
+}
+
+.skill {
+  text-align: left;
+  padding-left: 1rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: white;
+  height: 100%;
+  animation: fill .4s ease-in forwards;
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.skill svg{
+    align-self: center;
+    vertical-align: baseline;
+    /* padding: .1rem; */
+}
+
+
+.skill-table{
+    width: 100%;
+    text-align: left;
+    padding-right: 1rem;
+}
+
+.skill-table th{
+    color: var(--special-main);
+}
+
+.skill-table thead tr th{
+    border-bottom: 1px solid var(--special-main) !important;
+}
+
+.languages{
+    border-top: 1px solid var(--special-main);
+    border-left: 1px solid var(--special-main);
+    width: 13.5rem;
+    align-self: flex-start;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.languages::after{
+    content:"";
+    position: absolute;
+    vertical-align: bottom;
+    top: -4px;
+    border-top: 4px solid transparent;
+    border-left: 8px solid var(--special-main);
+    border-bottom: 4px solid transparent;
+    right: -2px;
+    color: var(--special-main);
+}
+
+.languages>div{
+    display: flex;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.language-lvl{
+    width: 0;
+    display: flex;
+    align-items: center;
+    vertical-align: baseline;
+}
+
+.img-container{
+    width: 95%;
+}
+
+.skill-flag{
+    height: 100%;
+    box-shadow: 1px 1px 5px 1px var(--special-main);
+    animation: fill .4s ease-in forwards; 
+}
+
+.fra{
+    --percentage: 12rem;
+    height: 6rem;
+}
+
+.gbr{
+    --percentage: 11rem;
+    height: 5.5rem;
+}
+
+.esp{
+    height: 3rem;
+    --percentage: 6rem;
+}
+
+.info-box+div{
+    display: none;
+    position: absolute;
+    width: fit-content;
+    top: 75%;
+    right: 0;
+    z-index: 2;
+    padding-right: 1rem;
+    color: var(--special-main);
+    border: 1px solid var(--special-main);
+    background-color: var(--special-secondary);
+}
+
+.info-box:hover+div{
+    display: block;
+}
+
+.recharts-polar-angle-axis-ticks{
+    fill: white;
+    z-index:2;
+}
+
+@keyframes fill {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: var(--percentage);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .gauge-label{
+        width: 40%;
+    }
+
+    .gauge {
+        width: 60%;
+    }
+
+    .skills{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .skill-table{
+        padding-right:0;
+    }
+    
+    .hardskills{
+        border-right: none;
+        border-bottom: 1px solid var(--special-main);
+        padding: 0;
+        padding-bottom: 2rem;
+    }
+
+    .softskills{
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    .hardskills>div{
+        width: 90%;
+    }
+    .softskills>div{
+        width: 90%;
+    }
+    
+    .info-box:hover+div{
+        display: block;
+        position: absolute;
+        width: fit-content;
+        top: 0;
+        left: 10%;
+        z-index: 2;
+        padding: 1rem;
+        color: var(--special-main);
+        border: 1px solid var(--special-main);
+        background-color: var(--special-secondary);
+    }
+
+    .recharts-polar-angle-axis-ticks{
+        font-size: 80%;
+    }
+
+    .languages{
+        align-self: center;
+    }
+    
+    
+}
