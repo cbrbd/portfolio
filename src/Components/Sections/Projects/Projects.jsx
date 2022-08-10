@@ -14,7 +14,6 @@ export function Projects(){
                         description="Le site web que vous visualisez en ce moment."
                         tech={["React", "ExpressJS"]}
                         libraries={["React-router", "Recharts", "Nodemailer"]}
-                        liveurl="/"
                         repo="https://github.com/cbrbd/portfolio"
                     />
 
